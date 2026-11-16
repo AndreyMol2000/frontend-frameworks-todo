@@ -2,6 +2,12 @@
 
 Простое учебное ToDo-приложение для дисциплины «Фреймворки Frontend разработки», 6 семестр, преподаватель Золотов А. Л.
 
+**Сайт:** https://andreymol2000.github.io/frontend-frameworks-todo/
+
+**Исходники:** https://github.com/AndreyMol2000/frontend-frameworks-todo
+
+[Успешные проверки и публикация в GitHub Actions](https://github.com/AndreyMol2000/frontend-frameworks-todo/actions/runs/43819631153).
+
 Vue 3, Quasar, TypeScript (strict), Pinia, Vue Router, Axios, Zod. Без собственного CSS: оформление стандартными компонентами и классами Quasar.
 
 ## Запуск

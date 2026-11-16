@@ -16,7 +16,7 @@
 | [8](https://netology.ru/profile/program/bhebdps-sfr-23-vv-5/lessons/595402/lesson_items/3368971) | Axios, login/register/refresh/profile/settings, retry, кэш, loading | `src/services`, `useAsync.ts`, `useApi.ts`; GET retry, обновление access token, кэш списка на 30 секунд |
 | [9](https://netology.ru/profile/program/bhebdps-sfr-23-vv-5/lessons/595402/lesson_items/3368972) | Валидация форм и API, уникальность email, FormError, журнал ошибок | Zod, `useValidation.ts`, `FormError.vue`, `mockSentry`, `src/main.ts` |
 | [10](https://netology.ru/profile/program/bhebdps-sfr-23-vv-5/lessons/595402/lesson_items/3368973) | Vitest + Vue Test Utils, успехи/ошибки/границы, покрытие ≥80%, CI | `tests`, `vitest.config.ts`, workflow |
-| [11](https://netology.ru/profile/program/bhebdps-sfr-23-vv-5/lessons/595402/lesson_items/3368977) | Сборка, Pages, Actions, lazy loading, SEO, анализ бандла, Lighthouse | Конфигурация и workflow подготовлены; успешный публичный deploy нужно подтвердить после публикации |
+| [11](https://netology.ru/profile/program/bhebdps-sfr-23-vv-5/lessons/595402/lesson_items/3368977) | Сборка, Pages, Actions, lazy loading, SEO, анализ бандла, Lighthouse | Успешный CI и deploy подтверждены [запуском №2](https://github.com/AndreyMol2000/frontend-frameworks-todo/actions/runs/43819631153); Lighthouse Performance публичного сайта 94 |
 
 ## Уточнения по формулировкам заданий
 
