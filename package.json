@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Учебное ToDo-приложение — фреймворки Frontend разработки",
+  "description": "Список задач на Vue 3 и Quasar",
   "scripts": {
     "dev": "quasar dev",
     "build": "quasar build",

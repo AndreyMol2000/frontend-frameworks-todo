@@ -17,7 +17,7 @@ async function send(): Promise<void> {
   <q-page padding class="row justify-center items-center">
     <q-card flat bordered class="col-12 col-sm-7 col-md-5 col-lg-3 q-pa-lg">
       <h1 class="text-h5 q-mt-none">{{ register ? 'Регистрация' : 'Вход в список задач' }}</h1>
-      <p class="text-grey-7">Учебное демо. Используйте только вымышленные данные.</p>
+      <p class="text-grey-7">Для входа используйте тестовые данные.</p>
       <FormError :error="ui.currentError" @retry="send" />
       <q-form class="q-gutter-sm" @submit.prevent="send">
         <q-input v-model="email" type="email" label="Email" outlined :rules="[rule(emailSchema)]" :disable="user.isBusy" />
