@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "demo",
+      "email": "student@example.com",
+      "password": "Demo1234!",
+      "settings": { "dark": false, "displayName": "Студент" }
+    }
+  ],
+  "todos": [],
+  "tags": [{ "id": "study", "name": "Учёба" }, { "id": "personal", "name": "Личное" }]
+}

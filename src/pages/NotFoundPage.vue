@@ -1,0 +1,1 @@
+<template><q-layout><q-page-container><q-page padding class="text-center"><h1 class="text-h3">404</h1><p>Страница не найдена</p><q-btn color="primary" label="К задачам" to="/" /></q-page></q-page-container></q-layout></template>

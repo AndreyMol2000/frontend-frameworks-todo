@@ -1,0 +1,11 @@
+{
+  "extends": "./.quasar/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    "types": ["vite/client", "node"]
+  },
+  "exclude": ["node_modules", "dist", "coverage", "reports", "**/*.temporary.compiled.*"]
+}

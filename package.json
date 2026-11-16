@@ -1,0 +1,47 @@
+{
+  "name": "frontend-frameworks-todo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Учебное ToDo-приложение — фреймворки Frontend разработки",
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "postinstall": "quasar prepare",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "mock": "node mock/server.cjs",
+    "preview": "vite preview --outDir dist/spa --host 127.0.0.1 --port 4173",
+    "build:report": "quasar build && node scripts/bundle-report.mjs"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.0",
+    "axios": "^1.13.0",
+    "pinia": "^3.0.0",
+    "quasar": "^2.18.0",
+    "vue": "^3.5.0",
+    "vue-router": "^5.5.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@quasar/app-vite": "3.10.4",
+    "@types/node": "^24.0.0",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "@vitest/coverage-v8": "5.1.0",
+    "@vue/test-utils": "2.4.6",
+    "eslint": "^9.39.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^16.0.0",
+    "jsdom": "^26.0.0",
+    "json-server": "0.17.4",
+    "typescript": "~5.9.0",
+    "typescript-eslint": "^8.0.0",
+    "vite": "^7.0.0",
+    "vitest": "5.1.0",
+    "vue-tsc": "^3.0.0"
+  },
+  "engines": { "node": ">=24" }
+}

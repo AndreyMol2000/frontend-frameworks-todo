@@ -1,0 +1,11 @@
+node_modules/
+.quasar/
+dist/
+coverage/
+.env.local
+.env.*.local
+mock/db.local.json
+reports/*.html
+reports/*.json
+*.log
+*.temporary.compiled.*

@@ -1,0 +1,7 @@
+{
+  "name": "todo-mock-backend",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "node server.cjs" },
+  "description": "Запускается после npm install в корне проекта"
+}

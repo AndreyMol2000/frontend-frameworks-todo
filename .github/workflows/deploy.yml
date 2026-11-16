@@ -1,0 +1,57 @@
+name: Проверка и публикация ToDo
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:coverage
+      - name: Определить путь GitHub Pages
+        shell: bash
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          if [[ "$REPO_NAME" == *.github.io ]]; then
+            echo "PUBLIC_PATH=/" >> "$GITHUB_ENV"
+          else
+            echo "PUBLIC_PATH=/$REPO_NAME/" >> "$GITHUB_ENV"
+          fi
+      - run: npm run build:report
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage-and-bundle
+          path: |
+            coverage/
+            dist/bundle-report.json
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist/spa
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
